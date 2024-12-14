@@ -7,25 +7,30 @@ import { Route, Routes } from "react-router";
 import ArticlePage from "@/pages/Article.tsx";
 import classNames from "classnames";
 import MobileHeader from "@/components/MobileHeader.tsx";
+import { ThemeProvider } from "@/components/ThemeProvider.tsx";
 
 function App() {
   const isMobile = useIsMobile()
   const className = classNames("w-full", {
     contents: isMobile,
     'flex-col': isMobile,
-    'justify-between': true
   })
 
   return (
     <>
-      <SidebarProvider className={className}>
-        <MobileHeader />
-        <AppSidebar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/articles/:file" element={<ArticlePage />}></Route>
-        </Routes>
-      </SidebarProvider>
+      <ThemeProvider>
+        <SidebarProvider className={className}>
+          <AppSidebar />
+          <div className="flex flex-col w-full">
+            <MobileHeader />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/articles/:file" element={<ArticlePage />}></Route>
+            </Routes>
+          </div>
+
+        </SidebarProvider>
+      </ThemeProvider>
     </>
   )
 }

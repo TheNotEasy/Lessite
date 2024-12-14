@@ -8,9 +8,12 @@ import {
 
 import {articles} from "@/data.json"
 import { Link } from "react-router";
+import ThemeSwitcher from "@/components/ThemeSwitcher.tsx";
+import { useIsMobile } from "@/hooks/use-mobile.tsx";
 
 export function AppSidebar() {
   const {setOpenMobile} = useSidebar();
+  const isMobile = useIsMobile();
 
   return (
     <Sidebar>
@@ -47,7 +50,11 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter />
+      {!isMobile && <SidebarFooter>
+        <SidebarGroup>
+          <ThemeSwitcher/>
+        </SidebarGroup>
+      </SidebarFooter>}
     </Sidebar>
   )
 }
