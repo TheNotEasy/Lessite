@@ -19,13 +19,15 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Навигация</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link to="/" onClick={() => setOpenMobile(false)}>
-                  <span>Главная страница</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/" onClick={() => setOpenMobile(false)}>
+                    <span>Главная страница</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
 
