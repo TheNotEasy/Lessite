@@ -22,5 +22,5 @@ export default function ArticlePage() {
     })()
   }, [file]);
 
-  return <Markdown className="w-full mx-auto p-5 markdown md-center-first">{md}</Markdown>;
+  return <Markdown className="w-full mx-auto p-5 markdown">{md}</Markdown>;
 }
