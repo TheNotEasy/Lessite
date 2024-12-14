@@ -12,7 +12,7 @@ export default function MobileHeader() {
 
   if (!isMobile) return <></>;
 
-  return <div className="flex justify-between items-center p-5 sticky top-0 backdrop-blur-sm border-b-2 border-b-black z-[2]">
+  return <div className="flex justify-between items-center p-5 sticky top-0 backdrop-blur-sm bg-background/[0.6] border-b-2 border-b-foreground z-[2] rounded-md">
     <AppSidebarTrigger></AppSidebarTrigger>
     <div className="flex">
       {location.pathname != '/' && <Link to="/">
