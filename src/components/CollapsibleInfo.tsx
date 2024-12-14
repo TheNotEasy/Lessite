@@ -12,7 +12,7 @@ import { info } from "@/data.json"
 import CollapsibleEntry from "@/components/CollapsibleEntry.tsx";
 
 export default function CollapsibleInfo() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(true)
 
   return (
     <Collapsible

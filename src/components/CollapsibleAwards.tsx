@@ -11,7 +11,7 @@ import {
 import { awards } from "@/data.json"
 
 export default function CollapsibleAwards() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(true)
 
   type AwardProps = {
     award: string
