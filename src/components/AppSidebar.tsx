@@ -30,6 +30,27 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/articles/Вебинары.md" onClick={() => setOpenMobile(false)}>
+                    <span>Участие в вебинарах</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/articles/Достижения_учащихся.md" onClick={() => setOpenMobile(false)}>
+                    <span>Достижения учеников</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/articles/Сертификаты.md" onClick={() => setOpenMobile(false)}>
+                    <span>Сертификаты</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
